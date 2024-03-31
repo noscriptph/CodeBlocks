@@ -10,43 +10,53 @@
         //*aqui *
         //}
         // que seria el metodo automaticamente creado en tu IDE
-       boolean seguir=true;
-        while (seguir) {
-            try {
-
-            
-                String menu = scanner.next();
-
-
-                switch (menu) {
-                    case "1":
-                     //menu 1
-
-
-                        break;
-
-                    case "2":
-                    //menu 2
-
-
-                        break;
-
-                    case "3":
-                    //menu 3
-
-
-                       break;
-
-                    case "4":
-                    //salir
-
-
-                        seguir=false;
-                        break;
-
-
+        boolean seguir = true;
+        Scanner scanner = new Scanner(System.in);
+        int intentos = 5; //cantidad maxima de intentos
+        int contador = 0;
+            while(seguir== true){
+            contador = contador + 1;
+                while (contador < intentos) {
+                    try {
+    
+    
+                        String menu = scanner.next();
+    
+    
+                        switch (menu) {
+                                case "1":
+                                    //menu 1
+    
+    
+                                    break;
+    
+                                case "2":
+                                    //menu 2
+    
+    
+                                    break;
+    
+                                case "3":
+                                    //menu 3
+    
+    
+                                    break;
+    
+                                case "4":
+                                    //salir
+    
+    
+                                    seguir = false;
+                                    break;
+                                default:
+                                    //mensaje por defecto al detectar una excepcion
+                                    System.out.println("Accion invalida, intentelo denuevo");
+    
+                                    break;
+    
+                                        }
+                    } catch (Exception e) {
+                    throw new RuntimeException(e);
                 }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
             }
         }
