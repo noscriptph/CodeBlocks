@@ -1,0 +1,52 @@
+        /*debes importar la siguiente linea
+        import java.util.Scanner;
+        esta linea va arriba de todo en el archivo en el que estas programando,
+        normalmente se usa en archivos de tipo clase
+        */
+
+        //lo siguiente va dentro del metodo en el que estas trabajando, o bien si estas recien aprendiendo
+        //a programar, va dentro de 
+        //public class Main {
+        //*aqui *
+        //}
+        // que seria el metodo automaticamente creado en tu IDE
+       boolean seguir=true;
+        while (seguir) {
+            try {
+
+            
+                String menu = scanner.next();
+
+
+                switch (menu) {
+                    case "1":
+                     //menu 1
+
+
+                        break;
+
+                    case "2":
+                    //menu 2
+
+
+                        break;
+
+                    case "3":
+                    //menu 3
+
+
+                       break;
+
+                    case "4":
+                    //salir
+
+
+                        seguir=false;
+                        break;
+
+
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
